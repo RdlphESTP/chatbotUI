@@ -1,11 +1,10 @@
 ## Clone repo
 ```
-git clone git@github.com:RdlphESTP/chatbotui.git
+git clone https://github.com/RdlphESTP/chatbotUI.git
 ```
 
 ## Build environnement with uv
 ```
-uv venv --python 3.12
 uv sync
 ```
 
