@@ -16,19 +16,22 @@ Copy `.env.example` to `.env` :
 cp .env.example .env
 ```
 
-Fill in your API keys :
+Fill in the environment variables :
 
-- **`OPENAI_API_KEY :`** for the LLM,
+* **`LLM_API_KEY`**
 
-- **`ROBOFLOW_API_KEY :`** for the VLM,
+* **`VLM_API_KEY`**
 
-- **`ZSCALER_CERT :`** SSL certificate if needed,
+* **`SSL_CERTIFICATE`**
 
-- `GEMINI_API_KEY` : for OCR (optional).
+* `EMBEDDING_API_KEY`
 
+You can also extend the list of models. Remember to add them in `src/chatbotui/config.py` with the following syntax :
+```
+new_model_info=os.getenv("NEW_MODEL_INFO")
+```
 
 ## Start the web app
-
 ```
 uv run chainlit run app.py
 ```
@@ -36,7 +39,6 @@ uv run chainlit run app.py
 ---
 
 ## Project structure
-
 ```mermaid
 flowchart TD
 
