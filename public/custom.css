@@ -1,0 +1,11 @@
+:root {
+    --primary: #F58531;
+}
+
+.bg-primary {
+    background-color: #971452 !important;
+}
+
+header {
+    background-color: #971452 !important;
+}
