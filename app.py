@@ -33,7 +33,6 @@ async def starters():
     ]
 
 # ================= SESSION =================
-
 @cl.on_chat_start
 async def start_chat():     # setup history on chat start
     cl.user_session.set(
@@ -50,7 +49,7 @@ async def start_chat():     # setup history on chat start
 # ================== LOOP ===================
 @cl.on_message
 async def on_message(prompt: cl.Message):   # get user prompt
-    history = cl.user_session.get("history")    # init history
+    history = cl.user_session.get("history")    # load history
 
     history.append(     # update history
         {
